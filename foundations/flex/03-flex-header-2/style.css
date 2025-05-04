@@ -2,6 +2,14 @@
 you'll learn about it later. */
 @import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
 
+/* 
+Header = main container
+Logo  Links  Profile image Button nesting within it
+Link and Logos will be containers, left justified
+Profile image / Notification will right-adjusted
+
+*/
+
 body {
   margin: 0;
   background: #eee;
@@ -12,6 +20,15 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.right-side{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .profile-image {
@@ -20,6 +37,7 @@ body {
   border-radius: 50%;
   width: 48px;
   height: 48px;
+  gap: 16px;
 }
 
 .logo {
@@ -35,14 +53,19 @@ button {
   background: rebeccapurple;
   color: white;
   padding: 8px 24px;
+  margin-left:auto;
 }
 
 a {
   /* this removes the line under our links */
   text-decoration: none;
   color: rebeccapurple;
+  padding: 8px;
 }
 
 ul {
   list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
 }
